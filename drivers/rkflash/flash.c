@@ -470,6 +470,7 @@ u32 flash_init(void __iomem *nandc_addr)
 			if (id_byte[0][1] != 0xF1 &&
 			    id_byte[0][1] != 0xDA &&
 			    id_byte[0][1] != 0xD1 &&
+			    id_byte[0][1] != 0xA1 &&	// 1.8V Flash support
 			    id_byte[0][1] != 0x95)
 				return FTL_UNSUPPORTED_FLASH;
 		}
